@@ -1,0 +1,8 @@
+jslogger
+
+Lightweight framework-agnostic Javascript logger.
+
+Usage:
+<script type="text/javascript" src="/path/to/jslogger.js"></script>
+
+http://mydevapp:3000/things?showLog=true&level=debug|info|error_message
