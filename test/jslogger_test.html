@@ -2,6 +2,21 @@
   <head>
     <title>jslogger test</title>
     <script type="text/javascript" src="../lib/jslogger.js"></script>
+    <script type="text/javascript">
+        if (location.search.indexOf("showLog=true") == -1)
+            location.href = location.href + "?showLog=true&level=debug"
+        function testLog() {
+            jslogger.init();
+            jslogger.debug("This is a debug message");
+            jslogger.info("This is a info message");
+            jslogger.error("This is a error message");
+        }
+        window.onload = testLog;
+    </script>
+    <style>
+    body {font-family: Helvetica}
+    #logger{width:300px;max-height:300px;position:absolute;top:4px;right:4px;z-index:1000;max-height:600px;background:#fff;overflow-y:auto;padding:2px;opacity:0.8;}
+    </style>
   </head>
   <body>
     <h1>jslogger test</h1>
