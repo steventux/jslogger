@@ -3,6 +3,18 @@ jslogger
 Lightweight framework-agnostic Javascript logger.
 
 Usage:
+Include this in your doc...
 <script type="text/javascript" src="/path/to/jslogger.js"></script>
 
+Log from your app:
+jslogger.debug("Hey I'm in the foo function, bar is " + bar);
+
+or
+try {
+  ...
+} catch (e) {
+  log.error("Failed to create widget, exception thrown.", e);
+}
+
+Call your app with this query string (using the desired level param)...
 http://mydevapp:3000/things?showLog=true&level=debug|info|error_message
